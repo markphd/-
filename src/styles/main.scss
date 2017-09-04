@@ -1,27 +1,31 @@
-// PRIMARY STYLE 
-
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
+@import '_font.scss';
 
 body {
-  font-size: 100%;
-  font-size: 1.6rem;
-  font-family: sans-serif;
-  color: #444444;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
+  font-family: 'Interface', 'Helvetica Nueue', Arial;  
 }
 
-ul, ol {
-  list-style-type: none;
+.headline {
+  font-family: 'CamingoCode-Bold', 'Helvetica Nueue', Arial;
+  font-family: 'Interface', 'Helvetica Nueue', Arial;  
+  font-size: 5em;
+  letter-spacing: -3px;
   margin: 0;
-  padding: 0;
 }
 
-// END PRIMARY STYLE 
+.kicker, .byline {
+  margin: 0;
+  color: blue;
+}
+
+
+footer {
+  width: 110px;
+  margin: 0 auto;
+  padding: 5% 2%;
+}
+
+.social {
+  float: left;
+  display: inline-block;
+  margin: 0 10px;
+}
