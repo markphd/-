@@ -3,7 +3,16 @@ html
     link(href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css" rel="stylesheet")
     link(href="dist/css/main.css" rel="stylesheet")
   body
-    header.fixed.w-100.ph6
+    svg.masthead--svg-right(style='overflow:visible')
+      //- rect(width='10000%', height='10000%', fill='#1fc8a9', transform='rotate(15) translate(0 15)')
+      rect(width='1000%', height='1000%', fill='#e44a66', transform='rotate(35) translate(595 -800)')
+      rect(width='1000%', height='1000%', fill='#ffefe5', transform='rotate(35) translate(600 -800)')  
+      //- rect(width='10000%', height='10000%', fill='#CCCCCC', transform='rotate(60 100 100) translate(0 10)')
+      
+      //- rect(width='10000%', height='10000%', fill='#663399', transform='rotate(20) translate(0 20)')
+
+
+    header.fixed.w-100.ph6(style="z-index: -3;")
       .fl.w-10.pa2.vh-100.bl.b--near-white
       .fl.w-10.pa2.vh-100.bl.b--near-white
       .fl.w-10.pa2.vh-100.bl.b--near-white
@@ -16,12 +25,13 @@ html
       .fl.w-10.pa2.vh-100.bl.br.b--near-white
     main.relative.center.w-100.ph6
       h1.headline ₥
-      p.byline Mark Philip
-      h2.kicker frontend designer <br> & developer
+      //- p.byline Mark Philip
+      //- h2.kicker frontend designer <br> & developer
       //- p.f3.lh-copy HTML / CSS / JS
-      h3.subhead.f-headline From mockup to markup. <br> All things frontend.
-      p.f3.lh-copy.measure-narrow.dib.mr4-l.mt0.v-top Everyday I strive to be a 
-        a(href='https://medium.com/nick-fredmans-blog/the-making-of-a-unicorn-db2bd8f6dfac') unicorn 🦄
+      h2.f-subheadline From mockup to markup. <br> All things frontend.
+      p.f3.lh-copy.measure-narrow.dib.mr4-l.mt0.v-top I am a frontend developer based in Dubai. Below are the 
+        span.strike clients
+        |  good people I have done work for:
 
       section.pa6
         h1.f1.lh-title – Are you a product designer? ✌
