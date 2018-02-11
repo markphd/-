@@ -4,25 +4,57 @@ html
     link(href="dist/css/main.css" rel="stylesheet")
   body
     svg.masthead--svg-right(style='overflow:visible')
+      defs
+        radialgradient#GradientPad(r='0.9', spreadmethod='pad')
+          stop(offset='0%', stop-color='#f78ca0')
+          stop(offset='19%', stop-color='#f9748f')
+          stop(offset='60%', stop-color='#fd868c')
+          stop(offset='90%', stop-color='#fb9b2a')
+          stop(offset='100%', stop-color='#fe9a8b')
+        lineargradient#GradientLine(spreadmethod='repeat')
+          stop(offset='0%', stop-color='#E3FDF5')
+          stop(offset='100%', stop-color='#FFE6FA')
+          //- stop(offset='60%', stop-color='#fd868c')
+          //- stop(offset='90%', stop-color='#fb9b2a')
+          //- stop(offset='100%', stop-color='#fe9a8b')
       //- rect(width='10000%', height='10000%', fill='#1fc8a9', transform='rotate(15) translate(0 15)')
-      rect(width='1000%', height='1000%', fill='#e44a66', transform='rotate(35) translate(595 -800)')
-      rect(width='1000%', height='1000%', fill='#ffefe5', transform='rotate(35) translate(600 -800)')  
+      rect(width='100%', height='100%', transform='rotate(-30) translate(600 -100)' fill='url(#GradientLine)')
+        //- animate(dur='3s', values='#E3FDF5; #FFE6FA; #E3FDF5', keytimes='0; 0.5; 1', attributename='fill', repeatcount='indefinite')
+        //- animatetransform(attributename='transform', type='rotate', values='0 150 100; 360 150 100', begin='0s', dur='5s')
+
+      rect(width='1000%', height='1000%', transform='rotate(35) translate(200 300)' fill='url(#GradientPad)')
+        //- animate(dur='3s', values='#f78ca0; #FFE6FA; #f78ca0', keytimes='0; 0.5; 1', attributename='fill', repeatcount='indefinite')
+      //- circle(cx='50' cy='127' r='10')
+        //- animate(dur='2s', values='#000000; #4e86b1; #000000', keytimes='0; 0.5; 1', attributename='fill', repeatcount='indefinite')
+        //-   circle(fill='#FFFFFF', stroke='#B450FF', stroke-width='6', stroke-miterlimit='10', cx='153', cy='127', r='6')
+        //-     animate(attributename='cy', from='127', to='127', begin='0s', dur='4s', values='127;117;117;90;90;127;127', keysplines='\
+        //-     0.1 0.8 0.2 1;\
+        //-     0.1 0.8 0.2 1;\
+        //-     0.1 0.8 0.2 1;\
+        //-     0.1 0.8 0.2 1;\
+        //-     0.1 0.8 0.2 1;\
+        //-     0.1 0.8 0.2 1', keytimes='\
+        //-     0;0.22;0.33;0.55;0.66;0.88;1', calcmode='spline', repeatcount='indefinite')
+
+        
       //- rect(width='10000%', height='10000%', fill='#CCCCCC', transform='rotate(60 100 100) translate(0 10)')
       
       //- rect(width='10000%', height='10000%', fill='#663399', transform='rotate(20) translate(0 20)')
+    //- #fb9b2a
+    //-#0c00ff
 
 
     header.fixed.w-100.ph6(style="z-index: -3;")
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.b--near-white
-      .fl.w-10.pa2.vh-100.bl.br.b--near-white
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.b--light-gray
+      .fl.w-10.pa2.vh-100.bl.br.b--light-gray
     main.relative.center.w-100.ph6
       h1.headline ₥
       //- p.byline Mark Philip
