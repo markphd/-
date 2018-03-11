@@ -1,7 +1,9 @@
 @import '_font.scss';
 
 body {
-  font-family: 'Interface', 'Helvetica Nueue', Arial;
+  // font-family: 'Interface', 'Helvetica Nueue', Arial;
+  font-family: 'Inconsolata', 'Helvetica Nueue', Arial;
+  // font-family: 'Rubik Mono One', sans-serif;
   background-color: #fcfcfc; //#1fc8a9; //#d3e8e1;
 }
 
@@ -11,6 +13,11 @@ svg > rect {
 
 rect.svg--top {
   animation: move-svg-top 15s cubic-bezier(0.175, 0.885, 0.32, 1.275); //infinite alternate-reverse;
+}
+
+span.hands {
+  display: inline-block;
+  animation: 1s wave infinite alternate-reverse;
 }
 
 rect.svg--bottom {
@@ -23,12 +30,14 @@ rect.svg--bottom {
   font-size: 5em;
   letter-spacing: -3px;
   margin: 0;
-  color: #0c00ff;
+  // color: #0c00ff;
 }
 
 .kicker, .byline {
+  // font-family: 'Inconsolata', 'Helvetica Nueue', Arial;
+  font-family: 'Rubik Mono One', sans-serif;
   margin: 0;
-  color: blue;
+  // color: blue;
 }
 
 .masthead--background {
@@ -57,6 +66,29 @@ article {
   width: 100vw;
 }
 
+nav > ul {
+  width: 50%;
+  float: right;
+}
+
+nav > ul > li {
+  padding: 1%;
+  float: left;
+  margin: 10px 0;
+  list-style: none;
+  font-size: 1.4em;
+}
+
+.main--nav li:not(:last-child):after {
+  content: '\00a0\00a0\00a0\00a0';
+  position: relative;
+  top: 0;
+  left: 3%;
+  width: 100px;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -81,5 +113,23 @@ article {
   }
   100% {
     transform: rotate(35deg) translate(200px, 300px)
+  }
+}
+
+@keyframes wave {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
